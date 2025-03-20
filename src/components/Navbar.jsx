@@ -116,7 +116,7 @@ const renderExploreLinks = (closeMenu) => (
     <div>
       <h3 className="font-medium mb-2">SHOP BY CATEGORY</h3>
       <ul className="space-y-2">
-        {["co-ords", "denims", "sweatshirts", "t-shirts", "pants"].map((item) => (
+        {["t-shirts"].map((item) => (
           <li key={item}>
             <Link to={`/collection/${item}`} className="text-gray-600 hover:text-black" onClick={() => closeMenu(false)}>
               {item.toUpperCase()}

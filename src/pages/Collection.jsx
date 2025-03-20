@@ -4,7 +4,7 @@ import { Filter, Plus, X } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import allProducts from '../data/products';
 
-const categories = ['ALL', 'CO-ORDS', 'DENIMS', 'SWEATSHIRTS', 'T-SHIRTS', 'PANTS', 'MILD', 'WILD'];
+const categories = [ 'T-SHIRTS'];
 const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 
 const products = [
