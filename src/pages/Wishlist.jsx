@@ -24,7 +24,8 @@ const Wishlist = () => {
   if (wishlist.length === 0) {
     return (
       <div className="pt-24 px-6 text-center">
-        <Heart size={48} className="mx-auto mb-4 text-gray-300" />
+        {/* <Heart size={48} className="mx-auto mb-4 text-gray-300" /> */}
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-wishlist-illustration-download-in-svg-png-gif-file-formats--online-shop-store-shopping-site-ecommerce-marketplace-states-pack-windows-interface-illustrations-9824478.png?f=webp" width={200} alt="flying chariot"  style={{display:"block", margin:"auto"}}/>
         <h2 className="text-2xl font-medium mb-4">Your wishlist is empty</h2>
         <p className="text-gray-600 mb-8">Add items you love to your wishlist. Review them anytime and easily move them to the cart.</p>
         <Link 
