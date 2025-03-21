@@ -329,13 +329,11 @@ const Collection = () => {
         {/* Main Content */}
         <div className="flex-1 px-6">
           <div className="flex justify-between items-center mb-8">
-            {/* <h1 className="text-2xl font-light">
+            <h1 className="text-2xl font-light">
               {selectedCategory}
               <sup className="ml-1 text-sm">{filteredProducts.length}</sup>
-            </h1> */}
-             <button onClick={() => setIsSearchOpen(true)}>
-            <Search size={24} />
-          </button>
+            </h1>
+             
             <button 
               data-filter-button
               className="flex items-center gap-2"

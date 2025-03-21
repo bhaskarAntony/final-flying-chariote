@@ -21,16 +21,18 @@ const Navbar = () => {
           <button onClick={() => setIsMobileMenuOpen(true)}>
             <Menu size={24} />
           </button>
-        </div>
 
-        <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
-          <img src={logo} width={100} alt="BBB Logo" />
-        </Link>
-
-        <div className="flex items-center gap-4">
           <button onClick={() => setIsSearchOpen(true)}>
             <Search size={24} />
           </button>
+        </div>
+
+        <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
+          <img src={logo} width={80} alt="BBB Logo" />
+        </Link>
+
+        <div className="flex items-center gap-4">
+          
           <Link to='/wishlist' >
             <Heart size={24} />
           </Link>

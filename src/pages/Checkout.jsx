@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
   const { items } = useCart();
+  console.log(items);
+  
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -168,7 +170,7 @@ const Checkout = () => {
             {items.map((item) => (
               <div key={`${item.id}-${item.size}`} className="flex gap-4">
                 <img
-                  src={item.image}
+                  src={item.image? (item.image) :"https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg"}
                   alt={item.name}
                   className="w-20 h-20 object-cover"
                 />
