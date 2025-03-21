@@ -9,7 +9,7 @@ const Home = () => {
     <div className="pt-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-2">
         {/* MILD Section */}
-        <Link to="/collection/all" className="relative group">
+        <Link to="/collection/mild" className="relative group">
           <div className="h-[90vh] bg-gray-100 overflow-hidden">
             <img 
               src={image1} 
@@ -27,7 +27,7 @@ const Home = () => {
         </Link>
 
         {/* WILD Section */}
-        <Link to="/collection/all" className="relative group">
+        <Link to="/collection/wild" className="relative group">
           <div className="h-[90vh] bg-gray-100 overflow-hidden">
             <img 
               src={image2}
