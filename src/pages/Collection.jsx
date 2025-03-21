@@ -1,8 +1,9 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Filter, Plus, X } from 'lucide-react';
+import { Filter, Plus, Search, X } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import allProducts from '../data/products';
+import SearchBar from '../components/SearchBar';
 
 const categories = [ 'T-SHIRTS'];
 const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
@@ -172,7 +173,7 @@ const Collection = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [showFilter, setShowFilter] = useState(false);
-
+ const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [filters, setFilters] = useState({
     categories: [],
     sizes: []
@@ -235,13 +236,15 @@ const Collection = () => {
   }, [selectedCategory, filters]);
 
   const handleAddToCart = (product, size) => {
+    console.log(product);
+    
     addToCart({
       id: product.id,
       name: product.name,
       price: product.price,
       size,
       quantity: 1,
-      image: product.image
+      image: product.images?.[0] || "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg"
     });
     setSelectedProduct(null);
     setSelectedSize(null);
@@ -326,10 +329,13 @@ const Collection = () => {
         {/* Main Content */}
         <div className="flex-1 px-6">
           <div className="flex justify-between items-center mb-8">
-            <h1 className="text-2xl font-light">
+            {/* <h1 className="text-2xl font-light">
               {selectedCategory}
               <sup className="ml-1 text-sm">{filteredProducts.length}</sup>
-            </h1>
+            </h1> */}
+             <button onClick={() => setIsSearchOpen(true)}>
+            <Search size={24} />
+          </button>
             <button 
               data-filter-button
               className="flex items-center gap-2"
@@ -408,6 +414,8 @@ const Collection = () => {
           </div>
         </div>
       </div>
+      <SearchBar isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+
     </div>
   );
 };

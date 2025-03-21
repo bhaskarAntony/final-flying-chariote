@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Search, User, ShoppingBag, Menu, X, Instagram, Facebook } from "lucide-react";
+import { Search, User, ShoppingBag, Menu, X, Instagram, Facebook, Heart } from "lucide-react";
 import { useCart } from "../context/CartContext";
-import logo from '../assets/logo.png'
+import SearchBar from "./SearchBar";
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const { items, setIsCartOpen } = useCart();
   const [showExploreMenu, setShowExploreMenu] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const navigate = useNavigate();
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
 
@@ -16,41 +18,24 @@ const Navbar = () => {
       {/* Navbar */}
       <nav className="fixed top-0 w-full bg-white z-50 px-6 py-4 flex justify-between items-center border-b">
         <div className="flex items-center gap-4">
-          {/* Mobile Menu Toggle Button */}
-          <button
-            className="lg:hidden"
-            onClick={() => setIsMobileMenuOpen(true)}
-          >
+          <button onClick={() => setIsMobileMenuOpen(true)}>
             <Menu size={24} />
           </button>
-
-          {/* EXPLORE Menu (Hidden on mobile, only for larger screens) */}
-          <div
-            className="relative hidden lg:block"
-            onMouseEnter={() => setShowExploreMenu(true)}
-            onMouseLeave={() => setShowExploreMenu(false)}
-          >
-            <span className="text-xl font-bold cursor-pointer">EXPLORE</span>
-            {showExploreMenu && (
-              <div className="absolute top-full left-0 w-screen bg-white z-40 border-b shadow-lg">
-                <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-4">
-                  {/* Explore Menu Sections */}
-                  {renderExploreLinks(setShowExploreMenu)}
-                </div>
-              </div>
-            )}
-          </div>
         </div>
 
-        {/* Logo */}
         <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
-          <img src={logo} width={100} alt="" />
+          <img src={logo} width={100} alt="BBB Logo" />
         </Link>
 
-        {/* Right Icons */}
         <div className="flex items-center gap-4">
-          <Search size={24} />
+          <button onClick={() => setIsSearchOpen(true)}>
+            <Search size={24} />
+          </button>
+          <Link to='/wishlist' >
+            <Heart size={24} />
+          </Link>
           <button onClick={() => navigate("/login")}>
+            
             <User size={24} />
           </button>
           <button className="relative" onClick={() => setIsCartOpen(true)}>
@@ -64,12 +49,13 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* Search Bar */}
+      <SearchBar isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+
       {/* Mobile Off-Canvas Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50" >
-          {/* Sidebar */}
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50">
           <div className="w-72 h-full bg-white shadow-lg p-6 relative" style={{overflow:'auto'}}>
-            {/* Close Button */}
             <button
               className="absolute top-4 right-4"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -77,11 +63,8 @@ const Navbar = () => {
               <X size={24} />
             </button>
 
-            {/* Mobile Explore Links */}
-            <h3 className="text-lg font-semibold mb-4">EXPLORE</h3>
             {renderExploreLinks(setIsMobileMenuOpen)}
 
-            {/* Social Media Links */}
             <div className="mt-6 flex gap-4">
               <a href="https://instagram.com" className="text-gray-600 hover:text-black">
                 <Instagram size={20} />
@@ -97,7 +80,6 @@ const Navbar = () => {
   );
 };
 
-/* Helper function to render Explore Links */
 const renderExploreLinks = (closeMenu) => (
   <div className="space-y-6">
     <div>

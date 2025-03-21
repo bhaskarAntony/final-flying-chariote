@@ -24,6 +24,7 @@ const Cart = () => {
               <X size={24} />
             </button>
           </div>
+          <hr />
 
           <div className="space-y-6">
             {items.map((item) => (
@@ -69,7 +70,7 @@ const Cart = () => {
             ))}
           </div>
 
-          {items.length > 0 && (
+          {items.length > 0? (
             <div className="mt-8 space-y-4">
               <div className="flex justify-between text-sm">
                 <span>Subtotal</span>
@@ -78,12 +79,20 @@ const Cart = () => {
               <p className="text-xs text-gray-500">
                 *SHIPPING AND EXTRA CHARGES CALCULATED AT CHECKOUT.
               </p>
-              <button className="w-full bg-black text-white py-3 flex items-center justify-center gap-2">
+              <a href='/checkout' className="w-full bg-black text-white py-3 flex items-center justify-center gap-2">
                 CHECKOUT SECURELY
                 <span className="text-lg">🔒</span>
-              </button>
+              </a>
+            </div>
+          ):(
+            <div className="mt-8 space-y-4 text-center">
+              <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-illustration-download-in-svg-png-gif-file-formats--shopping-genie-wish-states-pack-design-development-illustrations-2902552.png" alt="" className="w-full" />
+              <h1 className='text-lg text-center'>Your cart is empty</h1>
+              <button className="mt-8 w-auto bg-black text-white px-20 py-3 text-center m-auto"onClick={() => setIsCartOpen(false)}>Continue Shoping</button>
             </div>
           )}
+
+
         </div>
       </div>
     </div>

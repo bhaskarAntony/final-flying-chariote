@@ -40,6 +40,8 @@ const Login = ({ isOpen, onClose }) => {
               placeholder="9**** *****"
               className="w-full border-b border-gray-300 pb-2 focus:outline-none focus:border-black"
               required
+              minLength={10}
+              maxLength={13}
             />
           </div>
 

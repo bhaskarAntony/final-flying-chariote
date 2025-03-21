@@ -53,8 +53,8 @@ const Footer = () => {
             openSection.support ? 'max-h-40 mt-4' : 'max-h-0'
           }`}>
             <li><Link to="/contact" className="hover:text-black">CONTACT US</Link></li>
-            <li><Link to="/return" className="hover:text-black">RETURN A PRODUCT</Link></li>
-            <li><Link to="/track" className="hover:text-black">TRACK MY PRODUCT</Link></li>
+            {/* <li><Link to="/return" className="hover:text-black">RETURN A PRODUCT</Link></li>
+            <li><Link to="/track" className="hover:text-black">TRACK MY PRODUCT</Link></li> */}
           </ul>
         </div>
 
