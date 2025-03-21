@@ -10,8 +10,8 @@ const allProducts = [
         The T-shirt retains its shape and vibrancy even after multiple washes, thanks to the 240GSM fabric density.
         `,
         sizesInfo:['Male is 193 cm and wears size L', 'Female is 164 cm and wears size S'],
-        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.']
-
+        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.'],
+        category:"mild"
     },
     {
         id:2,
@@ -24,7 +24,8 @@ const allProducts = [
         The T-shirt retains its shape and vibrancy even after multiple washes, thanks to the 240GSM fabric density.
         `,
         sizesInfo:['Male is 193 cm and wears size L', 'Female is 164 cm and wears size S'],
-        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.']
+        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.'],
+        category:"mild"
         
     },
     {
@@ -38,7 +39,8 @@ const allProducts = [
         The T-shirt retains its shape and vibrancy even after multiple washes, thanks to the 240GSM fabric density.
         `,
         sizesInfo:['Male is 193 cm and wears size L', 'Female is 164 cm and wears size S'],
-        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.']
+        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.'],
+        category:"mild"
 
     },
     {
@@ -52,7 +54,8 @@ const allProducts = [
         The T-shirt retains its shape and vibrancy even after multiple washes, thanks to the 240GSM fabric density.
         `,
         sizesInfo:['Male is 193 cm and wears size L', 'Female is 164 cm and wears size S'],
-        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.']
+        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.'],
+        category:"mild"
 
     },
     {
@@ -66,7 +69,8 @@ const allProducts = [
         The T-shirt retains its shape and vibrancy even after multiple washes, thanks to the 240GSM fabric density.
         `,
         sizesInfo:['Male is 193 cm and wears size L', 'Female is 164 cm and wears size S'],
-        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.']
+        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.'],
+        category:"mild"
 
     },
     {
@@ -80,7 +84,8 @@ const allProducts = [
         The T-shirt retains its shape and vibrancy even after multiple washes, thanks to the 240GSM fabric density.
         `,
         sizesInfo:['Male is 193 cm and wears size L', 'Female is 164 cm and wears size S'],
-        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.']
+        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.'],
+        category:"mild"
 
     },
     {
@@ -94,7 +99,8 @@ const allProducts = [
         The T-shirt retains its shape and vibrancy even after multiple washes, thanks to the 240GSM fabric density.
         `,
         sizesInfo:['Male is 193 cm and wears size L', 'Female is 164 cm and wears size S'],
-        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.']
+        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.'],
+        category:"mild"
 
     },
     {
@@ -108,7 +114,8 @@ const allProducts = [
         The T-shirt retains its shape and vibrancy even after multiple washes, thanks to the 240GSM fabric density.
         `,
         sizesInfo:['Male is 193 cm and wears size L', 'Female is 164 cm and wears size S'],
-        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.']
+        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.'],
+        category:"mild"
 
     },
     // {
@@ -135,7 +142,8 @@ const allProducts = [
         The T-shirt retains its shape and vibrancy even after multiple washes, thanks to the 240GSM fabric density.
         `,
         sizesInfo:['Male is 193 cm and wears size L', 'Female is 164 cm and wears size S'],
-        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.']
+        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.'],
+        category:"mild"
 
     },
     {
@@ -149,7 +157,8 @@ const allProducts = [
         The T-shirt retains its shape and vibrancy even after multiple washes, thanks to the 240GSM fabric density.
         `,
         sizesInfo:['Male is 193 cm and wears size L', 'Female is 164 cm and wears size S'],
-        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.']
+        information:['100% cotton', '240GSM fabric', 'Boxy and slightly cropped cut', 'Wash at 30º C', '3D print', 'Print made with eco-friendly Italian ink.'],
+        category:"mild"
 
     }
 ]
