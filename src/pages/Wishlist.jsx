@@ -17,7 +17,7 @@ const Wishlist = () => {
       price: product.price,
       size: 'M', // Default size
       quantity: 1,
-      image: ""
+      image: product?.images?.[0] || "default.JPG"
     });
   };
 

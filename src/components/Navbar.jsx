@@ -4,15 +4,17 @@ import { Search, User, ShoppingBag, Menu, X, Instagram, Facebook, Heart } from "
 import { useCart } from "../context/CartContext";
 import SearchBar from "./SearchBar";
 import logo from '../assets/logo.png';
+import { useWishlist } from "../context/WishlistContext";
 
 const Navbar = () => {
   const { items, setIsCartOpen } = useCart();
+  const { wishlist } = useWishlist();
   const [showExploreMenu, setShowExploreMenu] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const navigate = useNavigate();
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
-
+  
   return (
     <>
       {/* Navbar */}
@@ -33,8 +35,14 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           
-          <Link to='/wishlist' >
+          <Link to='/wishlist' className="relative" >
             <Heart size={24} />
+
+            {wishlist.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                {wishlist.length}
+              </span>
+            )}
           </Link>
           <button onClick={() => navigate("/login")}>
             

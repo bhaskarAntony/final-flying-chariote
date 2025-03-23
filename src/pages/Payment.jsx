@@ -45,6 +45,7 @@ const Payment = () => {
             className={`p-4 border rounded-lg flex items-center gap-3 ${
               paymentMethod === 'card' ? 'border-black' : 'border-gray-200'
             }`}
+
           >
             <CreditCard size={24} />
             <span>Credit/Debit Card</span>
